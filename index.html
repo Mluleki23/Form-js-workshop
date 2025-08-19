@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <main id="root" class="container">
+        <div id="HelloSection">
+    <span id="Username"></span>
+    <p>would you like fill in the form</form></p>
+    <button class="btn btn-primary" onclick="showForm()">Yes</button>
+
+        <button class="btn btn-danger   "  onclick="showNo()">No</button>
+       
+       </div>
+        <span  id="noBtn" style="display: none;">Thank you, bye</span>
+        <section id="FormSection" style="display: none;">
+        <h1 class="text-primary">Form JS Workshop </h1>
+        <form name="myForm" id="myForm" onsubmit="newForm.submitHandler(event)">
+        <label for="num" class="form-label m-4">Enter a number:</label><br>
+        <input id="num1" name="num1" class="form-input m-4" oninput="newForm.checkIsNumber()"><br>
+
+        <label for="email" class="form-label m-4">Email:</label><br>
+        <input id="email" name="email" class="form-input m-4" oninput="newForm.checkIsEmail()"><br>
+
+        <span hidden id="notNumber" class="form-span m-4 bg-danger text-light">
+            Please enter a valid number!!
+        </span><br>
+
+        <span hidden id="notEmail" class="form-span m-4 bg-danger text-light">
+            Please enter a valid email!!
+        </span><br>
+
+        <button type="submit" class="cal-btn m-4">Submit</button>
+        <button type="button" class="dis-btn mb-4">Display input</button>
+    </form>
+</section>
+    </main>
+    <footer></footer>
+    <script type="module" src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
